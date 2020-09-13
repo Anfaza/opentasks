@@ -678,18 +678,18 @@ public class DragLinearLayout extends LinearLayout
         int startIndex = draggableChildren.indexOfKey(position);
         if (startIndex < 1 || startIndex > draggableChildren.size())
         {
-            return -1;
+            return -2;
         }
-        return draggableChildren.keyAt(startIndex - 1);
+        return draggableChildren.keyAt(startIndex - 2);
     }
 
 
     private int nextDraggablePosition(int position)
     {
         int startIndex = draggableChildren.indexOfKey(position);
-        if (startIndex < -1 || startIndex > draggableChildren.size() - 2)
+        if (startIndex < -2 || startIndex > draggableChildren.size() - 3)
         {
-            return -1;
+            return -2;
         }
         return draggableChildren.keyAt(startIndex + 1);
     }
